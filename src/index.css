@@ -1,3 +1,5 @@
+/* I would use emotion for big projects for styling */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +9,110 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* styles for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+/* styles for the champions page */
+.main-wrapper {
+  margin: 0 auto;
+  padding: 1rem 2rem 4em 2em;
+  max-width: 53rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+}
+
+.details,
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading > a {
+  font-size: 0.75rem;
+}
+
+.details + a {
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+}
+
+.standings > span,
+.bio > span {
+  display: block;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* styles for the winner page */
+
+.winners div > span {
+  font-weight: 700;
+  margin-right: 1.25rem;
+}
+
+.champion {
+  background: #d6e1ff;
+}
+
+/* styles for the spinner */
+
+.loader {
+  border: 0.5rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 0.5rem solid #ccc;
+  width: 7.5rem;
+  height: 7.5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  font-size: 4em;
+}
+
+.fullpage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: #f47fa5;
+}
+
+/* styles for media queries */
+
+@media (max-width: 62rem) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .bio {
+    margin-top: 1.25rem;
+  }
 }
