@@ -1,4 +1,4 @@
-const apiURL = 'http://ergast.com/api/f1' // put in an env variable
+const apiURL = 'https://ergast.com/api/f1' // put in an env variable
 
 export async function client(endpoint, customConfig = {}) {
   const config = {
